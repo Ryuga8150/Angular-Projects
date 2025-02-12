@@ -1,0 +1,12 @@
+<app-card>
+  <article>
+    <h2>{{ task.title }}</h2>
+
+    <!-- Below is the usecaseof pipes:(Output transformers) and are also configurable -->
+    <time>{{ task.dueDate | date : "fullDate" }}</time>
+    <p>{{ task.summary }}</p>
+    <p class="actions">
+      <button (click)="onCompleteTask()">Complete</button>
+    </p>
+  </article>
+</app-card>

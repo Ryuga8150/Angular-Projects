@@ -1,0 +1,13 @@
+<span>
+  <ng-content />
+</span>
+<!-- <ng-content select=".icon" /> -->
+<!-- another way -->
+
+<span class="icon">
+  <ng-content select="icon">
+    ->
+    <!-- this is for default -->
+  </ng-content>
+  <!-- notice there is no dot we are not selecting the class but the element -->
+</span>

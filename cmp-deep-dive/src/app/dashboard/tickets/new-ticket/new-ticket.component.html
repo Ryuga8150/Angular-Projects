@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit(titleInput.value, ticketText.value)" #form>
+  <p>
+    <app-control label="Title">
+      <input name="title" id="title" #titleInput #input />
+    </app-control>
+  </p>
+  <p>
+    <app-control label="Request">
+      <textarea
+        name="request"
+        id="request"
+        rows="3"
+        #ticketText
+        #input
+      ></textarea>
+    </app-control>
+  </p>
+  <p>
+    <!-- if i add #btn to below it will not be a html button element
+    but it will be an instance of our button component 
+    so you should be aware of that -->
+
+    <button appButton>
+      Submit
+      <span class="icon"> → </span>
+    </button>
+  </p>
+</form>
